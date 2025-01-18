@@ -1,0 +1,115 @@
+body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     color: #333;
+   }
+   
+   .container {
+     width: 90%;
+     margin: auto;
+   }
+   
+   .top-bar {
+     background-color: #6200ea;
+     color: white;
+     text-align: center;
+     padding: 5px 0;
+   }
+   
+   .main-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: white;
+     padding: 10px 20px;
+     border-bottom: 2px solid #6200ea;
+   }
+   
+   .logo img {
+     width: 50px;
+     vertical-align: middle;
+   }
+   
+   .logo span {
+     font-size: 18px;
+     font-weight: bold;
+     margin-left: 10px;
+     color: #6200ea;
+   }
+   
+   .contact-actions {
+     display: flex;
+     align-items: center;
+   }
+   
+   .contact-actions div {
+     margin-right: 20px;
+     text-align: right;
+   }
+   
+   .contact-actions .btn {
+     background-color: #6200ea;
+     color: white;
+     border: none;
+     padding: 10px 15px;
+     border-radius: 5px;
+     cursor: pointer;
+   }
+   
+   .contact-actions .btn:hover {
+     background-color: #4500b0;
+   }
+   
+   .menu {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #6200ea;
+     color: white;
+     padding: 10px 20px;
+   }
+   
+   .menu ul {
+     list-style: none;
+     display: flex;
+     margin: 0;
+     padding: 0;
+   }
+   
+   .menu ul li {
+     margin-right: 20px;
+     cursor: pointer;
+   }
+   
+   .menu ul li:hover {
+     text-decoration: underline;
+   }
+   
+   .menu .btn {
+     background-color: white;
+     color: #6200ea;
+     padding: 8px 15px;
+     border-radius: 5px;
+     border: 2px solid white;
+     cursor: pointer;
+   }
+   
+   .menu .btn:hover {
+     background-color: #4500b0;
+     color: white;
+   }
+   
+   .banner {
+     text-align: center;
+     padding: 50px 20px;
+     background-image: url('banner.jpg');
+     background-size: cover;
+     color: white;
+   }
+   
+   .banner h1 {
+     font-size: 36px;
+     text-shadow: 2px 2px 5px #333;
+   }
+   
