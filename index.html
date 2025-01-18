@@ -341,14 +341,54 @@
           <h3>Contact Us</h3>
           <p>Phone: +250 79 341 1594</p>
           <p>Email: <a href="mailto:iraguha@gmail.com">iraguha@gmail.com</a></p>
-          <p>Address: Kigali, Rwanda</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Iraguha Polytechnic. All Rights Reserved.</p>
+        <p>&copy; 2025 Iraguha Polytechnic. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- JavaScript for Interaction -->
+  <script>
+    // Toggle submenu visibility in the navigation menu
+    document.querySelectorAll('.menu ul li').forEach(item => {
+      item.addEventListener('mouseover', () => {
+        const subMenu = item.querySelector('ul');
+        if (subMenu) {
+          subMenu.style.display = 'block';
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        const subMenu = item.querySelector('ul');
+        if (subMenu) {
+          subMenu.style.display = 'none';
+        }
+      });
+    });
+
+    // Add smooth scrolling to "Back to Top" button
+    const topButton = document.createElement('button');
+    topButton.innerText = 'Back to Top';
+    topButton.className = 'btn';
+    topButton.style.position = 'fixed';
+    topButton.style.bottom = '20px';
+    topButton.style.right = '20px';
+    topButton.style.display = 'none';
+    document.body.appendChild(topButton);
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        topButton.style.display = 'block';
+      } else {
+        topButton.style.display = 'none';
+      }
+    });
+
+    topButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
