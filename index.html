@@ -89,12 +89,34 @@
     }
 
     .menu ul li {
+      position: relative;
       margin-right: 20px;
       cursor: pointer;
     }
 
-    .menu ul li:hover {
-      text-decoration: underline;
+    .menu ul li:hover > ul {
+      display: block;
+    }
+
+    .menu ul li > ul {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      color: #000;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .menu ul li > ul li {
+      padding: 10px 20px;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .menu ul li > ul li:hover {
+      background-color: #f0f0f0;
     }
 
     .menu .btn {
@@ -111,26 +133,6 @@
       color: white;
     }
 
-    /* Banner Section */
-    .banner {
-      text-align: center;
-      padding: 0; /* No padding needed for full-width */
-      background-color: #f5f5f5;
-    }
-
-    .banner img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 0; /* Ensures the image spans the full width */
-    }
-
-    .banner h1 {
-      margin-top: 20px;
-      font-size: 36px;
-      color: #6200ea;
-    }
-
     /* Responsive Design */
     @media (max-width: 768px) {
       .menu ul {
@@ -141,10 +143,6 @@
       .contact-actions {
         flex-direction: column;
         align-items: flex-end;
-      }
-
-      .banner h1 {
-        font-size: 24px;
       }
     }
   </style>
@@ -169,11 +167,11 @@
       <div class="contact-actions">
         <div>
           <p>Call Now</p>
-          <p>+250 788 876 460</p>
+          <p>+250 79 341 1594</p>
         </div>
         <div>
           <p>Send Message</p>
-          <p>hanikaaip3@gmail.com</p>
+          <p>iraguha@gmail.com</p>
         </div>
         <button class="btn">Support Us</button>
       </div>
@@ -184,10 +182,33 @@
   <div class="menu">
     <ul>
       <li>HOME</li>
-      <li>ABOUT US</li>
-      <li>PROGRAM</li>
-      <li>ADMISSION</li>
-      <li>PRODUCTION UNIT</li>
+      <li>ABOUT US
+        <ul>
+          <li>Our History</li>
+          <li>Vision & Mission</li>
+          <li>Leadership</li>
+        </ul>
+      </li>
+      <li>PROGRAM
+        <ul>
+          <li>Undergraduate</li>
+          <li>Postgraduate</li>
+          <li>Online Courses</li>
+        </ul>
+      </li>
+      <li>ADMISSION
+        <ul>
+          <li>Undergraduate Admission</li>
+          <li>Postgraduate Admission</li>
+        </ul>
+      </li>
+      <li>PRODUCTION UNIT
+        <ul>
+          <li>About</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+      </li>
       <li>MEDIA</li>
       <li>CONTACT</li>
     </ul>
@@ -196,8 +217,10 @@
 
   <!-- Banner Section -->
   <main class="banner">
-    <img src="Internet marketing for higher education.jpg" alt="Graduation Ceremony" class="banner-image">
-    <h1>Second Graduation Ceremony At Iraguha</h1>
+    <div class="banner-overlay">
+      <img src="Internet marketing for higher education.jpg" alt="Graduation Ceremony" class="banner-image">
+      <h1 class="banner-heading">Internet Marketing for Higher Education</h1>
+    </div>
   </main>
 </body>
 </html>
